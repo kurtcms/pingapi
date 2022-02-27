@@ -1,0 +1,47 @@
+version: "3.1"
+
+services:
+  pingapi:
+    build: .
+    container_name: pingapi
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - network
+
+  nginx:
+    depends_on:
+      - pingapi
+    image: nginx:1.21.4-alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx-conf:/etc/nginx/conf.d
+      - nginx:/var/www/html
+      - certbot:/etc/letsencrypt
+    networks:
+      - network
+    command: "/bin/sh -c 'while :; do sleep 15d & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    depends_on:
+      - nginx
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot:/etc/letsencrypt
+      - nginx:/var/www/html
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 30d & wait $${!}; done;'"
+
+volumes:
+  pingapi:
+  nginx:
+  certbot:
+
+networks:
+  network:
+    driver: bridge

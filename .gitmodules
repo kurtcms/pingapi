@@ -1,0 +1,3 @@
+[submodule "pingc"]
+	path = pingc
+	url = https://github.com/kurtcms/pingc

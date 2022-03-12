@@ -13,6 +13,8 @@ Building upon the [FastAPI](https://fastapi.tiangolo.com/) framework that taps i
 
 A Bash script is imported to execute ping and to convert the output at runtime to comma separated values (CSV), for a subsequent computation with [NumPy](https://github.com/numpy/numpy) and [pandas](https://github.com/matplotlib/matplotlib), of the descriptive statistics on the RTT measured. The source code of the Bash script is available in another [Git repository](#reference).
 
+A detailed walk-through is available [here](https://kurtcms.org/api-return-the-round-trip-time-rtt-jitter-and-packet-loss-to-an-ip-or-hostname/).
+
 <img src="https://kurtcms.org/git/pingapi/pingapi-screenshot.png" width="550">
 
 ## Table of Content

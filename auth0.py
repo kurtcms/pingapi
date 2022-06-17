@@ -4,6 +4,9 @@ from textwrap import dedent
 import jwt
 
 class verify_token():
+    '''
+    Verify the given Auth0 JWT
+    '''
     def __init__(self, token):
         self.token = token
 

@@ -16,7 +16,7 @@ class ip_model(BaseModel):
     Pydantic model for POST request
     '''
     ip: str
-    c: Optional[int] = Query(5, gt=0, le=60)
+    c: Optional[int] = Query(5, gt = 0, le = 60)
 
     class Config:
         schema_extra = {
@@ -62,23 +62,23 @@ app = FastAPI(
     contact = {
         'name': 'Kurt CM See',
         'url': 'https://kurtcms.org',
-        'email': 'kurtcms@gmail.com',
+        'email': 'kurtcms@gmail.com'
     },
     license_info = {
         'name': 'GPL-2.0 License',
-        'url': 'https://www.gnu.org/licenses/gpl-2.0.html',
+        'url': 'https://www.gnu.org/licenses/gpl-2.0.html'
     }
 )
 
 @app.get(
     '/pingapi/{ip}',
     response_model = rtt_model,
-    response_description='The RTT, jitter and packet loss measured',
+    response_description = 'The RTT, jitter and packet loss measured',
     summary = 'Return the round trip time (RTT), jitter and packet loss'
 )
 async def pingapi_get(
     ip: str,
-    c: Optional[int] = Query(5, gt=0, le=60),
+    c: Optional[int] = Query(5, gt = 0, le = 60),
     token: str = Depends(token_auth_scheme)
 ):
     '''
@@ -106,7 +106,7 @@ async def pingapi_get(
 @app.post(
     '/pingapi/',
     response_model = rtt_model,
-    response_description='The RTT, jitter and packet loss measured',
+    response_description = 'The RTT, jitter and packet loss measured',
     summary = 'Return the round trip time (RTT), jitter and packet loss'
 )
 async def pingapi_post(
@@ -141,8 +141,8 @@ async def exception_handler(request: Request, exception: exception_model):
     Return a HTTP 400 Bad Request status code with the error message in JSON
     '''
     return JSONResponse(
-        status_code=400,
-        content={'message': exception.msg},
+        status_code = 400,
+        content = {'message': exception.msg}
     )
 
 async def pingapi(ip: str, count: int):
@@ -156,8 +156,8 @@ async def pingapi(ip: str, count: int):
     '''
     proc = await asyncio.create_subprocess_shell(
         f'./pingc/pingc {ip} -c {count}',
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE)
+        stdout = asyncio.subprocess.PIPE,
+        stderr = asyncio.subprocess.PIPE)
     stdout, stderr = await proc.communicate()
 
     if stderr:

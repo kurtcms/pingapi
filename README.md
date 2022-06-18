@@ -186,7 +186,7 @@ NGINX is instructed to reload its configuration every 24 hours to ensure the ren
 Edit the `docker-compose.yml` should these intervals need to be adjusted.
 
 ```shell
-$ nano /app/docker-compose-wordpress-nginx-mysql/docker-compose.yml
+$ nano /app/pingapi/docker-compose.yml
 ```
 
 Modify the values as appropriate.

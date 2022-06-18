@@ -30,6 +30,7 @@ A detailed walk-through is available [here](https://kurtcms.org/api-return-the-r
 - [API Specifications](#api-specifications)
 	- [GET /pingapi/[ip]?c=[int]](#get-pingapiipcint)
 	- [POST /pingapi/](#post-pingapi)
+- [SSL/TLS Certificate Renewal](#ssltls-certificate-renewal)
 - [Reference](#reference)
 
 ## Getting Started
@@ -174,6 +175,30 @@ content-length: 167
 content-type: application/json
 
 {"date_time":"20220224154545","ip_host":"1.1.1.1","rtt_mean":2.61,"rtt_min":2.13,"rtt_max":3.82,"jitter":0.71,"count_requested":5,"count_received":5,"packet_loss":0.0}
+```
+
+## SSL/TLS Certificate Renewal
+
+Certbot is instructed by Docker Compose to attempt a SSL/TLS certificate renewal every 12 hours, which should be more than adequate considering the certificate is [valid for 90 days](https://letsencrypt.org/docs/faq/#what-is-the-lifetime-for-let-s-encrypt-certificates-for-how-long-are-they-valid).
+
+NGINX is instructed to reload its configuration every 24 hours to ensure the renewed certificate will come into effect at most 12 hours after a renewal, which should also be well in advance of an impending expiry.
+
+Edit the `docker-compose.yml` should these intervals need to be adjusted.
+
+```shell
+$ nano /app/docker-compose-wordpress-nginx-mysql/docker-compose.yml
+```
+
+Modify the values as appropriate.
+
+```
+  nginx:
+    ...
+    command: "/bin/sh -c 'while :; do sleep 24h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    ...
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 ```
 
 ## Reference

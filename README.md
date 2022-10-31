@@ -15,7 +15,7 @@ A Bash script is imported to execute ping and to convert the output at runtime t
 
 A detailed walk-through is available [here](https://kurtcms.org/api-return-the-round-trip-time-rtt-jitter-and-packet-loss-to-an-ip-or-hostname/).
 
-<img src="https://kurtcms.org/git/pingapi/pingapi-screenshot.png" width="550">
+<img src="https://github.com/kurtcms/pingapi/blob/master/screenshot.png" width="550">
 
 ## Table of Content
 

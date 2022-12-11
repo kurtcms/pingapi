@@ -60,9 +60,9 @@ app = FastAPI(
     version = '1.0',
     terms_of_service = 'https://kurtcms.org',
     contact = {
-        'name': 'Kurt CM See',
+        'name': 'Kurt, Cheung Mun See',
         'url': 'https://kurtcms.org',
-        'email': 'kurtcms@gmail.com'
+        'email': 'me@kurtcms.org'
     },
     license_info = {
         'name': 'GPL-2.0 License',
@@ -151,7 +151,7 @@ async def pingapi(ip: str, count: int):
     measured by ping given an IP address or hostname and
     the number of ICMP datagram for the measurement. A Bash
     script is employed to execute ping and converts the output
-    at runtime to comma separated values (CSV) . The source code
+    at runtime to comma separated values (CSV). The source code
     for which is available at https://github.com/kurtcms/pingc.
     '''
     proc = await asyncio.create_subprocess_shell(

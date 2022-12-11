@@ -36,7 +36,7 @@ A detailed walk-through is available [here](https://kurtcms.org/api-return-the-r
 Get started in three simple steps:
 
 1. [Download](#git-clone) a copy of the API;
-2. Create the [environment variables](#environment-variables) for retrieving the JSON Web Key Set (JWKS) from Auth0;
+2. Create the [environment variables](#environment-variables) for retrieving the JSON Web Key Set (JWKS) from Auth0; and
 3. [Docker Compose](#docker-compose) to start the API.
 
 ### Git Clone

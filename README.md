@@ -43,7 +43,7 @@ Get started in three simple steps:
 
 Download a copy of the app with `git clone`
 ```shell
-$ git clone https://github.com/kurtcms/pingapi /app/
+$ git clone https://github.com/kurtcms/pingapi /app/pingapi/
 ```
 
 ### Auth0 JWT

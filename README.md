@@ -99,8 +99,8 @@ A dummy SSL/TLS certificate and private key will need to be created for NGINX to
 Create the dummy certificate before obtaining a signed one with the Bash script that comes with API.
 
 ```shell
-$ chmod +x /app/pingapi/fetch-certbot-tls \
-    && /app/pingapi/fetch-certbot-tls
+$ chmod +x /app/pingapi/certbot/certbot.sh \
+    && /app/pingapi/certbot/certbot.sh
 ```
 
 Enter the root domain and the email address for registration and recovery when prompted.

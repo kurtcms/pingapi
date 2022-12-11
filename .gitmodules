@@ -1,3 +1,6 @@
 [submodule "pingc"]
 	path = pingc
 	url = https://github.com/kurtcms/pingc
+[submodule "docker-compose"]
+	path = docker-compose
+	url = https://github.com/kurtcms/docker-compose

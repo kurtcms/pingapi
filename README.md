@@ -88,8 +88,8 @@ With Docker Compose, the API may be provisioned with a single command.
 Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) with the Bash script that comes with API.
 
 ```shell
-$ chmod +x /app/pingapi/install-docker-compose \
-    && /app/pingapi/install-docker-compose
+$ chmod +x /app/pingapi/docker-compose/docker-compose.sh \
+    && /app/pingapi/docker-compose/docker-compose.sh
 ```
 
 #### SSL/TLS Certificate

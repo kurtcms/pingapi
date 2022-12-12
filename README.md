@@ -141,7 +141,7 @@ Return the RTT, jitter and packet loss to the given IP address or hostname in th
 Duration must be greater than 0 and less than 60.
 
 ```shell
-$ curl -X GET https://kurtcms.org/pingapi/1.1.1.1?c=5 \
+$ curl -X GET "https://kurtcms.org/pingapi/1.1.1.1?c=5" \
     -H "Authorization: Bearer (redacted)" \
     -i
 ```
@@ -165,7 +165,7 @@ Return the RTT, jitter and packet loss to the given IP address or hostname in th
 Duration must be greater than 0 and less than 60.
 
 ```shell
-$ curl -X POST https://kurtcms.org/pingapi/ \
+$ curl -X POST "https://kurtcms.org/pingapi/" \
     -H "Authorization: Bearer (redacted)" \
     -H "Content-Type: application/json" \
     -d '{"ip":"1.1.1.1","c":"5"}' \

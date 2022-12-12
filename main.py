@@ -155,7 +155,7 @@ async def pingapi(ip: str, count: int):
     for which is available at https://github.com/kurtcms/pingc.
     '''
     proc = await asyncio.create_subprocess_shell(
-        f'./pingc/pingc {ip} -c {count}',
+        f'./pingc/pingc.sh {ip} -c {count}',
         stdout = asyncio.subprocess.PIPE,
         stderr = asyncio.subprocess.PIPE)
     stdout, stderr = await proc.communicate()

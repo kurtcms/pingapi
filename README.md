@@ -47,6 +47,14 @@ Download a copy of the app with `git clone`. Be sure to pass the `--recurse-subm
 $ git clone --recurse-submodules https://github.com/kurtcms/pingapi /app/pingapi/
 ```
 
+### Permission
+
+Provide the imported Bash script with execute permission.
+
+```shell
+$ chmod +x /app/pingapi/pingc/pingc.sh
+```
+
 ### Auth0 JWT
 
 A JWT in the OAuth 2.0 Bearer Token schema ([RFC 6750](https://datatracker.ietf.org/doc/html/rfc6750)) is required to access the API.

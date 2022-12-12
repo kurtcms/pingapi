@@ -41,7 +41,8 @@ Get started in three simple steps:
 
 ### Git Clone
 
-Download a copy of the app with `git clone`
+Download a copy of the app with `git clone`.
+
 ```shell
 $ git clone https://github.com/kurtcms/pingapi /app/pingapi/
 ```

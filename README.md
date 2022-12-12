@@ -122,7 +122,7 @@ $ docker-compose down
 
 ## API Specifications
 
-Powered by [Swagger UI](https://github.com/swagger-api/swagger-ui), an OpenAPI, or formerly known as Swagger, specification is available at /docs. An alternative specification powered by [Redoc](https://github.com/Redocly/redoc) is also available at /redoc.
+Powered by [Swagger UI](https://github.com/swagger-api/swagger-ui), an OpenAPI, or formerly known as Swagger, specification is available at `/docs`. An alternative specification powered by [Redoc](https://github.com/Redocly/redoc) is also available at `/redoc`.
 
 Below are the endpoints available along with their corresponding parameters and responses.
 

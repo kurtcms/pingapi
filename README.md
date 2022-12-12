@@ -57,7 +57,7 @@ A JWT in the OAuth 2.0 Bearer Token schema ([RFC 6750](https://datatracker.ietf.
 $ curl --request POST \
     --url https://kurtcms.us.auth0.com/oauth/token \
     --header "content-type: application/json" \
-    --data '{"client_id":"(redacted)","client_secret":"(redacted),"audience":"https://kurtcms.com/pingapi/","grant_type":"client_credentials"}'
+    --data '{"client_id":"(redacted)","client_secret":"(redacted),"audience":"https://kurtcms.org/pingapi/","grant_type":"client_credentials"}'
 ```
 
 ### Environment Variables
@@ -76,7 +76,7 @@ And define the variables accordingly.
 # For retrieving the JSON Web Key Set (JWKS) from Auth0
 AUTH0_DOMAIN = kurtcms.us.auth0.com
 AUTH0_ISSUER = https://kurtcms.us.auth0.com/
-AUTH0_AUDIENCE = https://kurtcms.com/pingapi/
+AUTH0_AUDIENCE = https://kurtcms.org/pingapi/
 AUTH0_ALGORITHMS = RS256
 ```
 
@@ -133,7 +133,7 @@ Return the RTT, jitter and packet loss to the given IP address or hostname in th
 Duration must be greater than 0 and less than 60.
 
 ```shell
-$ curl -X GET https://kurtcms.com/pingapi/1.1.1.1?c=5 \
+$ curl -X GET https://kurtcms.org/pingapi/1.1.1.1?c=5 \
     -H "Authorization: Bearer (redacted)" \
     -i
 ```
@@ -157,7 +157,7 @@ Return the RTT, jitter and packet loss to the given IP address or hostname in th
 Duration must be greater than 0 and less than 60.
 
 ```shell
-$ curl -X POST https://kurtcms.com/pingapi/ \
+$ curl -X POST https://kurtcms.org/pingapi/ \
     -H "Authorization: Bearer (redacted)" \
     -H "Content-Type: application/json" \
     -d '{"ip":"1.1.1.1","c":"5"}' \

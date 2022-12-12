@@ -86,7 +86,7 @@ With Docker Compose, the API may be provisioned with a single command.
 
 #### Install
 
-Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) with the Bash script that comes with API.
+Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) with the [Bash](https://github.com/gitGNU/gnu_bash) script that comes with API.
 
 ```shell
 $ chmod +x /app/pingapi/docker-compose/docker-compose.sh \

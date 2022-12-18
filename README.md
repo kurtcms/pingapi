@@ -2,12 +2,11 @@
 
 This REST API is containerised with [Docker Compose](https://docs.docker.com/compose/) for a modular and cloud native deployment that fits in any microservice architecture.
 
-Building upon the [FastAPI](https://fastapi.tiangolo.com/) framework that taps into the lightweight and high-performance [Asynchronous Server Gateway Interface](https://asgi.readthedocs.io/en/latest/) (ASGI), [Starlette](https://www.starlette.io/), and the Python data validation module, [Pydantic](https://pydantic-docs.helpmanual.io/); and with the endpoints secured by [Auth0](https://auth0.com/) based on the  JSON Web Key (JWK) specification ([RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517)); it does the following:
+Building upon the [FastAPI](https://fastapi.tiangolo.com/) framework that taps into the lightweight and high-performance [Asynchronous Server Gateway Interface](https://asgi.readthedocs.io/en/latest/) (ASGI), [Starlette](https://www.starlette.io/), and the Python data validation module, [Pydantic](https://pydantic-docs.helpmanual.io/); and with the endpoints secured by [Auth0](https://auth0.com/) based on the JSON Web Key (JWK) specification ([RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517)); it does the following:
 
 1. Validate with Auth0 the JSON Web Token (JWT, [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519)) provided by the client;
 2. Ping the given IP address or hostname with the given number of ICMP datagram in an interval of one datagram per second; and
-3. Return the round trip time (RTT), jitter and packet loss
-    measured.
+3. Return the round trip time (RTT), jitter and packet loss measured.
 
 [NGINX](https://www.nginx.org/) is deployed for the web server, with [Certbot](https://certbot.eff.org/) by the [Electronic Frontier Foundation](https://www.eff.org/) (EFF) for obtaining and renewing a SSL/TLS certificate on a given root domain from [Let’s Encrypt](https://letsencrypt.org/), a non-profit Certificate Authority by the [Internet Security Research Group](https://www.abetterinternet.org/) (ISRG).
 

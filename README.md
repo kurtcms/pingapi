@@ -18,6 +18,7 @@ A detailed walk-through is available [here](https://kurtcms.org/api-return-the-r
 
 - [Getting Started](#getting-started)
   - [Git Clone](#git-clone)
+  - [Permission](#permission)
   - [Auth0 JWT](#auth0-jwt)
   - [Environment Variable](#environment-variables)
   - [Docker Compose](#docker-compose)
@@ -102,7 +103,7 @@ $ chmod +x /app/pingapi/docker-compose/docker-compose.sh \
 
 #### SSL/TLS Certificate
 
-A dummy SSL/TLS certificate and private key will need to be created for NGINX to start service, and for Certbot to subsequently obtain a signed SSL/TLS certificate from Let’s Encrypt by answering a [HTTP-01 challenge](https://letsencrypt.org/docs/challenge-types/#http-01-challenge).
+A dummy SSL/TLS certificate and private key will need to be created for NGINX to start service, and for Certbot to subsequently obtain a signed SSL/TLS certificate from Let's Encrypt by answering a [HTTP-01 challenge](https://letsencrypt.org/docs/challenge-types/#http-01-challenge).
 
 Create the dummy certificate before obtaining a signed one with the Bash script that comes with API.
 

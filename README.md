@@ -8,7 +8,7 @@ Building upon the [FastAPI](https://fastapi.tiangolo.com/) framework that taps i
 2. Ping the given IP address or hostname with the given number of ICMP datagram in an interval of one datagram per second; and
 3. Return the round trip time (RTT), jitter and packet loss measured.
 
-[NGINX](https://www.nginx.org/) is deployed for the web server, with [Certbot](https://certbot.eff.org/) by the [Electronic Frontier Foundation](https://www.eff.org/) (EFF) for obtaining and renewing a SSL/TLS certificate on a given root domain from [Let’s Encrypt](https://letsencrypt.org/), a non-profit Certificate Authority by the [Internet Security Research Group](https://www.abetterinternet.org/) (ISRG).
+[NGINX](https://www.nginx.org/) is deployed for the web server, with [Certbot](https://certbot.eff.org/) by the [Electronic Frontier Foundation](https://www.eff.org/) (EFF) for obtaining and renewing a signed SSL/TLS certificate on a given root domain from [Let’s Encrypt](https://letsencrypt.org/), a non-profit Certificate Authority by the [Internet Security Research Group](https://www.abetterinternet.org/) (ISRG).
 
 A [Bash](https://github.com/gitGNU/gnu_bash) script is imported to execute ping and to convert the output at runtime to comma separated values (CSV), for a subsequent computation with [NumPy](https://github.com/numpy/numpy) and [pandas](https://github.com/matplotlib/matplotlib), of the descriptive statistics on the RTT measured. The source code of the Bash script is available in another [repository](#reference).
 
